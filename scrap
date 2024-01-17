@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 全体のフォント設定 */
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+        }
+
+        /* 漢字用のフォント設定 */
+        .kanji {
+            font-family: 'Hiragino Mincho ProN', 'MS PMincho', serif;
+        }
+ /* ナビゲーションメニューとタイトルのスタイル設定 */
+ .container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            padding-left: 40px;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-right: 40px; /* 「scrap」とナビゲーションバーの間のマージンを増やす */
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 24px;
+            margin: 0 30px;
+            opacity: 1;
+            transition: opacity 0.2s; /* フェード効果の持続時間を短くする */
+        }
+ 
+ </style>
+    </head>
+    <body>
+        <div class="grid-container">
+            <!-- 20個の正方形を生成 -->
+            <body>
+                <!-- 他のコンテンツ -->
+            
+                <div class="grid-container">
+                    <!-- 各ボックスをグリッド内に配置 -->
+                    <div class="box">
+                        <!-- 'new-page.html'へのリンクを開く -->
+                        <a href="new-page.html" target="_blank">
+                            <!-- 画像を表示 -->
+                            <img src="/Users/srt/Downloads/109D217E-965C-47A2-9E9F-07956A2B3049.jpg" alt="Box 1">
+                        </a>
+                    </div>
+                    
+
+                    <div class="box">
+                        <img src="/Users/srt/Downloads/S__128630805_0.jpg" alt="Box 1">
+                    </div>
+
+                    <div class="box">
+                        <img src="/Users/srt/Downloads/S__128630791_0.jpg" alt="Box 1">
+                    </div>
+
+                    <div class="box">
+                        <img src="/Users/srt/Downloads/S__128630792_0.jpg" alt="Box 1">
+                    </div>
+
+                    <div class="box">
+                        <img src="/Users/srt/Downloads/S__128630793_0.jpg" alt="Box 1">
+                    </div>
+
+                    <div class="box">
+                        <img src="/Users/srt/Downloads/S__128630794_0.jpg" alt="Box 1">
+                    </div>
+
+                    <div class="box">
+                        <img src="/Users/srt/Downloads/S__128630795_0.jpg" alt="Box 1">
+                    </div>
+
+                    <div class="box">
+                        <img src="/Users/srt/Downloads/S__128630811_0.jpg" alt="Box 1">
+                    </div>
+
+                    <div class="box">
+                        <img src="/Users/srt/Downloads/S__128630797_0.jpg" alt="Box 1">
+                    </div>
+
+                    <div class="box">
+                        <img src="/Users/srt/Downloads/S__128630799_0.jpg" alt="Box 1">
+                    </div>
+
+                    <div class="box">
+                        <img src="/Users/srt/Downloads/S__128630800_0.jpg" alt="Box 1">
+                    </div>
+
+                    <div class="box">
+                        <img src="/Users/srt/Downloads/S__128630802_0.jpg" alt="Box 1">
+                    </div>
+                    
+                    <!DOCTYPE html>
+                    <html lang="en">
+
+                    
+
+
+                    </body>
+
+                    </html>
+                    <!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Music App Inspired UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="book-title" placeholder="本のタイトルを入力">
+        <button onclick="searchBook()">検索</button>
+    </div>
+    <div id="book-details"></div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Search</title>
+    <script>
+        // Function to handle the search event
+        async function searchBooks() {
+            const bookTitle = document.getElementById('book-title').value;
+            const responseElement = document.getElementById('response');
+
+            try {
+                // Here you would typically send the request to your server
+                // and let your server interact with the OpenAI API
+                const response = await fetch('your-server-endpoint', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        // Your server would authenticate the request
+                    },
+                    body: JSON.stringify({ bookTitle: bookTitle })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                const data = await response.json();
+                responseElement.textContent = data.ai_recommendations.join('\n');
+            } catch (error) {
+                console.error('There has been a problem with your fetch operation:', error);
+            }
+        }
+    </script>
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommendation Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="branding">
+            <h1>Book
+                Finder</h1>
+        </div>
+        <div class="search-container">
+            <input type="text" id="bookTitle" placeholder="本のタイトルで検索...">
+            <button onclick="findSimilarBooks()">検索</button>
+        </div>
+        <div id="results-container">
+            <div id="search-results" class="search-results"></
+div>
+</div>
+</div>
+<div class="content">
+<!-- Content goes here -->
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
